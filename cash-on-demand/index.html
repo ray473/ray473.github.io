@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cash On Demand Workshop — Build the Offer, Send the Campaign, Collect the Cash · Ray Edwards</title>
+<meta name="description" content="A 2-day live workshop with Ray Edwards. Build your high-value offer, write your 5-day email campaign together, and put your first $30K–$60K payday in motion. $1,500 includes the workshop plus two full months of coaching.">
+<style>
+  /* ============================================================
+     THE CASH ON DEMAND WORKSHOP — long-form offer page
+     "The Copywriter's Page" system: ink & paper, red = craft/
+     persuasion, gold = prosperity/purpose. Dual-theme, self-
+     contained, CSP-safe. All rules scoped under #cod-workshop.
+     ============================================================ */
+
+  #cod-workshop{
+    --paper:#FCFBF7; --raised:#FFFFFF; --ink:#17140F; --muted:#6B6357;
+    --hair:#E7E2D6; --gold-line:rgba(180,131,43,.42);
+    --red:#DA2C1F; --red-strong:#BE2117; --gold:#B4832B; --gold-tint:rgba(180,131,43,.10);
+    --red-tint:rgba(218,44,31,.06);
+    --band:#17140F; --band-raised:#221E17; --band-ink:#FCFBF7; --band-muted:#B7AE9C; --band-red:#FF6250; --band-gold:#D9A94A;
+    --focus:#DA2C1F;
+    --font-display:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-serif:Georgia, "Times New Roman", "Iowan Old Style", serif;
+    --font-label:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    --content:760px; --gutter:24px;
+  }
+  @media (prefers-color-scheme: dark){
+    #cod-workshop{
+      --paper:#151310; --raised:#1E1B16; --ink:#F3EEE2; --muted:#A79E8C;
+      --hair:#332E25; --gold-line:rgba(217,169,74,.34);
+      --red:#FF5442; --red-strong:#C63125; --gold:#D9A94A; --gold-tint:rgba(217,169,74,.10);
+      --red-tint:rgba(255,84,66,.08);
+      --band:#0F0D0A; --band-raised:#1E1B16; --band-ink:#F3EEE2; --band-muted:#A79E8C; --band-red:#FF5442; --band-gold:#D9A94A;
+      --focus:#FF5442;
+    }
+  }
+  :root[data-theme="light"] #cod-workshop{
+    --paper:#FCFBF7; --raised:#FFFFFF; --ink:#17140F; --muted:#6B6357;
+    --hair:#E7E2D6; --gold-line:rgba(180,131,43,.42);
+    --red:#DA2C1F; --red-strong:#BE2117; --gold:#B4832B; --gold-tint:rgba(180,131,43,.10); --red-tint:rgba(218,44,31,.06);
+    --band:#17140F; --band-raised:#221E17; --band-ink:#FCFBF7; --band-muted:#B7AE9C; --band-red:#FF6250; --band-gold:#D9A94A;
+    --focus:#DA2C1F;
+  }
+  :root[data-theme="dark"] #cod-workshop{
+    --paper:#151310; --raised:#1E1B16; --ink:#F3EEE2; --muted:#A79E8C;
+    --hair:#332E25; --gold-line:rgba(217,169,74,.34);
+    --red:#FF5442; --red-strong:#C63125; --gold:#D9A94A; --gold-tint:rgba(217,169,74,.10); --red-tint:rgba(255,84,66,.08);
+    --band:#0F0D0A; --band-raised:#1E1B16; --band-ink:#F3EEE2; --band-muted:#A79E8C; --band-red:#FF5442; --band-gold:#D9A94A;
+    --focus:#FF5442;
+  }
+
+  #cod-workshop,
+  #cod-workshop *{box-sizing:border-box;}
+  #cod-workshop{scroll-behavior:smooth;margin:0;font-family:var(--font-serif);color:var(--ink);background:var(--paper);
+    font-size:19px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  #cod-workshop a{color:inherit;}
+  #cod-workshop p{margin:0 0 1.15em;}
+  #cod-workshop strong{font-weight:700;}
+  #cod-workshop em{font-style:italic;}
+  #cod-workshop h1,#cod-workshop h2,#cod-workshop h3{margin:0;font-family:var(--font-display);font-weight:900;letter-spacing:-.03em;line-height:1.04;text-wrap:balance;}
+  #cod-workshop :focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:2px;}
+
+  #cod-workshop .wrap{max-width:var(--content);margin:0 auto;padding:0 var(--gutter);}
+  #cod-workshop .label{font-family:var(--font-label);text-transform:uppercase;letter-spacing:.14em;font-weight:700;font-size:.72rem;}
+
+  /* Buttons */
+  #cod-workshop .btn{display:inline-flex;align-items:center;gap:.5em;justify-content:center;font-family:var(--font-label);
+    font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;padding:16px 30px;border-radius:2px;
+    cursor:pointer;border:1.5px solid transparent;text-decoration:none;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;}
+  #cod-workshop .btn-primary{background:var(--red-strong);color:#fff;box-shadow:0 8px 22px rgba(190,33,23,.26);}
+  #cod-workshop .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(190,33,23,.32);}
+  #cod-workshop .btn-sm{padding:11px 18px;font-size:.72rem;}
+  #cod-workshop .btn-lg{padding:19px 38px;font-size:.9rem;}
+
+  /* Header */
+  #cod-workshop header.site{position:sticky;top:0;z-index:60;background:var(--paper);border-bottom:1px solid var(--hair);}
+  @supports (backdrop-filter:blur(6px)){#cod-workshop header.site{background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:saturate(140%) blur(10px);-webkit-backdrop-filter:saturate(140%) blur(10px);}}
+  #cod-workshop .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;height:70px;max-width:960px;margin:0 auto;padding:0 var(--gutter);}
+  #cod-workshop .wordmark{display:flex;flex-direction:column;line-height:1;}
+  #cod-workshop .wordmark .name{font-family:var(--font-display);font-weight:900;font-size:1.1rem;letter-spacing:.02em;}
+  #cod-workshop .wordmark .name b{color:var(--red);}
+  #cod-workshop .wordmark .tag{font-family:var(--font-serif);font-style:italic;font-size:.72rem;color:var(--muted);margin-top:5px;}
+
+  /* Hero */
+  #cod-workshop .hero{padding:66px 0 44px;text-align:center;}
+  #cod-workshop .hero .kicker{font-family:var(--font-label);text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:700;color:var(--gold);margin-bottom:20px;}
+  #cod-workshop .hero h1{font-size:clamp(2.4rem,6.2vw,4.2rem);}
+  #cod-workshop .hero .sub{font-family:var(--font-serif);color:var(--ink);margin-top:22px;font-size:1.2rem;max-width:60ch;margin-left:auto;margin-right:auto;}
+  #cod-workshop .hero .byline{font-family:var(--font-serif);font-style:italic;color:var(--muted);margin-top:16px;font-size:1.02rem;}
+  #cod-workshop .avail{max-width:640px;margin:30px auto 0;background:var(--raised);border:1px solid var(--hair);border-top:3px solid var(--red);
+    padding:24px 28px;text-align:left;box-shadow:0 14px 34px rgba(23,20,15,.08);}
+  #cod-workshop .avail p:last-child{margin-bottom:0;}
+  #cod-workshop .hero-cta{margin-top:34px;}
+  #cod-workshop .hero-cta .mini{font-family:var(--font-serif);font-style:italic;color:var(--muted);margin-top:14px;font-size:.98rem;}
+  #cod-workshop .signoff{font-family:var(--font-serif);font-style:italic;font-size:1.15rem;color:var(--ink);margin-top:8px;}
+
+  /* Prose rhythm */
+  #cod-workshop main section{padding:20px 0;}
+  #cod-workshop .lead-in{font-size:1.16rem;}
+  #cod-workshop .divider{max-width:var(--content);margin:26px auto;height:1px;background:var(--gold-line);}
+
+  /* Cash. On. Demand. beat */
+  #cod-workshop .mmm{text-align:center;padding:44px 0 40px;}
+  #cod-workshop .mmm .lead{font-family:var(--font-serif);font-style:italic;color:var(--muted);margin-bottom:18px;}
+  #cod-workshop .mmm .big{font-family:var(--font-display);font-weight:900;letter-spacing:-.04em;line-height:1;
+    font-size:clamp(2.4rem,7vw,4.2rem);}
+  #cod-workshop .mmm .big .a{color:var(--red);}
+  #cod-workshop .mmm .big .b{color:var(--gold);}
+  #cod-workshop .mmm .sub{font-family:var(--font-serif);font-style:italic;color:var(--muted);font-size:1.2rem;margin-top:16px;}
+
+  /* generic bullet list */
+  #cod-workshop ul.list{list-style:none;padding:0;margin:0 0 1.15em;}
+  #cod-workshop ul.list li{position:relative;padding-left:26px;margin-bottom:.5em;}
+  #cod-workshop ul.list li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;background:var(--red);border-radius:1px;transform:rotate(45deg);}
+
+  /* Bleeding / Needing / Leading cards */
+  #cod-workshop .bnl{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0 8px;}
+  #cod-workshop .bnl .card{background:var(--raised);border:1px solid var(--hair);border-top:3px solid var(--hair);padding:22px 20px;}
+  #cod-workshop .bnl .card.lead{border-top-color:var(--gold);box-shadow:0 14px 34px rgba(180,131,43,.14);}
+  #cod-workshop .bnl .card h3{font-family:var(--font-display);font-size:1.15rem;font-weight:900;letter-spacing:-.02em;margin-bottom:8px;}
+  #cod-workshop .bnl .card.lead h3{color:var(--gold);}
+  #cod-workshop .bnl .card p{font-size:.98rem;color:var(--muted);margin-bottom:0;}
+  #cod-workshop .bnl-note{font-family:var(--font-serif);font-style:italic;text-align:center;color:var(--red);font-size:1.2rem;margin:18px 0 6px;}
+
+  /* fit cards: not-for-you / but-if-you */
+  #cod-workshop .fit{background:var(--raised);border:1px solid var(--hair);padding:28px 30px;margin:12px 0;}
+  #cod-workshop .fit.no{border-left:4px solid var(--red);background:var(--red-tint);}
+  #cod-workshop .fit.yes{border-left:4px solid var(--gold);background:var(--gold-tint);}
+  #cod-workshop .fit h3{font-family:var(--font-display);font-size:1.35rem;font-weight:900;letter-spacing:-.02em;margin-bottom:16px;}
+  #cod-workshop .fit ul{list-style:none;padding:0;margin:0;}
+  #cod-workshop .fit li{position:relative;padding-left:30px;margin-bottom:.7em;}
+  #cod-workshop .fit li:last-child{margin-bottom:0;}
+  #cod-workshop .fit.no li::before{content:"\2715";position:absolute;left:0;top:.05em;color:var(--red);font-weight:700;font-family:var(--font-label);}
+  #cod-workshop .fit.yes li::before{content:"\2713";position:absolute;left:0;top:.05em;color:var(--gold);font-weight:700;font-family:var(--font-label);}
+  #cod-workshop .turn{font-family:var(--font-serif);font-style:italic;font-size:1.3rem;text-align:center;color:var(--red);margin:26px 0;}
+
+  #cod-workshop .mix{background:var(--raised);border:1px solid var(--hair);border-top:3px solid var(--gold);padding:26px 30px;margin:20px 0;}
+  #cod-workshop .mix h3{font-family:var(--font-display);font-size:1.2rem;font-weight:800;margin-bottom:14px;letter-spacing:-.02em;}
+
+  /* Days (workshop agenda) */
+  #cod-workshop .phase{margin:14px 0;padding-top:26px;border-top:1px solid var(--gold-line);}
+  #cod-workshop .phase .ph-tag{display:flex;align-items:baseline;gap:16px;margin-bottom:14px;}
+  #cod-workshop .phase .ph-num{font-family:var(--font-display);font-weight:900;font-size:2.6rem;line-height:.8;color:var(--gold);letter-spacing:-.04em;}
+  #cod-workshop .phase h2{font-size:clamp(1.7rem,4vw,2.3rem);}
+  #cod-workshop .phase .ph-sub{font-family:var(--font-label);text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;font-weight:700;color:var(--muted);margin-bottom:4px;}
+  #cod-workshop .fw{font-family:var(--font-serif);font-style:italic;color:var(--red);font-weight:400;}
+  #cod-workshop .phase-close{border-left:3px solid var(--gold);padding:4px 0 4px 20px;font-family:var(--font-serif);font-style:italic;color:var(--ink);font-size:1.1rem;margin-top:6px;}
+
+  /* Investment box — MONEY MOMENT (single price) */
+  #cod-workshop .invest-box{background:var(--raised);border:1px solid var(--hair);box-shadow:0 22px 54px rgba(23,20,15,.14);
+    margin:22px 0 26px;overflow:hidden;}
+  #cod-workshop .invest-box .ib-top{background:var(--band);color:var(--band-ink);padding:20px 30px;text-align:center;}
+  #cod-workshop .invest-box .ib-top .label{color:var(--band-gold);}
+  #cod-workshop .invest-box .ib-top h2{color:var(--band-ink);font-size:1.7rem;margin-top:6px;}
+  #cod-workshop .invest-solo{padding:34px 30px;text-align:center;}
+  #cod-workshop .invest-solo .amt{font-family:var(--font-display);font-weight:900;letter-spacing:-.04em;font-size:4rem;line-height:1;color:var(--red);font-variant-numeric:tabular-nums;}
+  #cod-workshop .invest-solo .when{font-family:var(--font-label);text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;font-weight:700;color:var(--muted);margin-top:12px;}
+  #cod-workshop .included{list-style:none;padding:0;margin:24px auto 0;max-width:520px;text-align:left;display:flex;flex-direction:column;gap:12px;}
+  #cod-workshop .included li{position:relative;padding-left:30px;font-size:1.02rem;}
+  #cod-workshop .included li::before{content:"\2713";position:absolute;left:0;top:.02em;color:var(--gold);font-weight:700;font-family:var(--font-label);}
+  #cod-workshop .profitable{font-family:var(--font-serif);font-style:italic;font-size:1.18rem;text-align:center;color:var(--gold);margin:8px auto 4px;max-width:56ch;}
+
+  /* Dark reveal band (the math / the promise) */
+  #cod-workshop .band{background:var(--band);color:var(--band-ink);border-top:1px solid var(--gold-line);border-bottom:1px solid var(--gold-line);
+    padding:56px 0;margin:34px 0;}
+  #cod-workshop .band .wrap{max-width:720px;}
+  #cod-workshop .band .seal{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--band-gold);color:var(--band-gold);
+    font-family:var(--font-label);text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;font-weight:700;padding:9px 16px;border-radius:2px;margin-bottom:20px;}
+  #cod-workshop .band h2{color:var(--band-ink);font-size:clamp(1.8rem,4.4vw,2.6rem);margin-bottom:18px;}
+  #cod-workshop .band p{color:var(--band-muted);}
+  #cod-workshop .band p strong,#cod-workshop .band em{color:var(--band-ink);}
+  #cod-workshop .band .kick{font-family:var(--font-serif);font-style:italic;font-size:1.15rem;color:var(--band-ink);}
+  #cod-workshop .mathrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0 18px;}
+  #cod-workshop .mathrow .m{background:var(--band-raised);border:1px solid var(--gold-line);padding:22px 20px;text-align:center;}
+  #cod-workshop .mathrow .m .eq{font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--band-muted);letter-spacing:-.01em;}
+  #cod-workshop .mathrow .m .tot{font-family:var(--font-display);font-weight:900;font-size:2.6rem;line-height:1;color:var(--band-gold);letter-spacing:-.04em;margin-top:8px;font-variant-numeric:tabular-nums;}
+
+  /* Who it's for */
+  #cod-workshop .qual{list-style:none;counter-reset:q;padding:0;margin:0 0 1.15em;}
+  #cod-workshop .qual li{position:relative;padding-left:44px;margin-bottom:.85em;}
+  #cod-workshop .qual li::before{counter-increment:q;content:counter(q);position:absolute;left:0;top:0;width:28px;height:28px;
+    background:var(--band);color:var(--band-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-display);font-weight:800;font-size:.9rem;}
+
+  /* Steps */
+  #cod-workshop .steps{list-style:none;padding:0;margin:16px 0 1.15em;}
+  #cod-workshop .steps li{background:var(--raised);border:1px solid var(--hair);padding:18px 22px;margin-bottom:12px;}
+  #cod-workshop .steps li b{font-family:var(--font-display);color:var(--red);letter-spacing:-.01em;}
+
+  /* FAQ */
+  #cod-workshop .faq{margin:16px 0 8px;}
+  #cod-workshop .faq .item{background:var(--raised);border:1px solid var(--hair);border-left:3px solid var(--gold);padding:20px 24px;margin-bottom:12px;}
+  #cod-workshop .faq .q{font-family:var(--font-display);font-weight:800;font-size:1.08rem;letter-spacing:-.01em;margin-bottom:8px;}
+  #cod-workshop .faq .a{margin-bottom:0;color:var(--ink);}
+
+  /* CTA blocks */
+  #cod-workshop .cta-block{text-align:center;padding:40px 0 20px;}
+  #cod-workshop .cta-block .mini{font-family:var(--font-serif);font-style:italic;color:var(--muted);margin-top:14px;}
+
+  /* P.S. */
+  #cod-workshop .ps{background:var(--raised);border:1px solid var(--hair);border-left:4px solid var(--gold);padding:26px 30px;margin:24px 0;}
+  #cod-workshop .ps .lab{font-family:var(--font-display);font-weight:900;color:var(--red);margin-right:6px;}
+
+  /* Disclaimer */
+  #cod-workshop .disclaimer{font-size:.86rem;font-style:italic;color:var(--muted);margin-top:8px;}
+
+  /* Footer */
+  #cod-workshop footer.site{background:var(--band);color:var(--band-muted);padding:44px 0;border-top:1px solid var(--gold-line);margin-top:40px;text-align:center;}
+  #cod-workshop footer .wordmark{align-items:center;display:inline-flex;}
+  #cod-workshop footer .wordmark .name{color:var(--band-ink);}
+  #cod-workshop footer .wordmark .name b{color:var(--band-red);}
+  #cod-workshop footer .fine{font-family:var(--font-label);text-transform:uppercase;letter-spacing:.08em;font-size:.66rem;font-weight:700;margin-top:18px;color:var(--band-muted);}
+  #cod-workshop footer .disclaimer-foot{font-family:var(--font-serif);font-style:normal;font-size:.82rem;line-height:1.5;color:var(--band-muted);max-width:640px;margin:16px auto 0;opacity:.9;}
+
+  #cod-workshop h2.sec{font-size:clamp(1.7rem,4vw,2.3rem);margin:10px 0 8px;}
+
+  @media (prefers-reduced-motion:reduce){#cod-workshop *{animation:none !important;transition:none !important;scroll-behavior:auto !important;}}
+
+  @media (max-width:640px){
+    #cod-workshop{font-size:18px;}
+    #cod-workshop .nav .wordmark .tag{display:none;}
+    #cod-workshop .bnl{grid-template-columns:1fr;}
+    #cod-workshop .mathrow{grid-template-columns:1fr;}
+    #cod-workshop .hero{padding:48px 0 36px;}
+  }
+</style>
+</head>
+<body>
+<div id="cod-workshop">
+
+<!-- ============ HEADER ============ -->
+<header class="site">
+  <div class="nav">
+    <a class="wordmark" href="#top" aria-label="Ray Edwards home">
+      <span class="name">RAY <b>EDWARDS</b></span>
+      <span class="tag">Prosperity With Purpose</span>
+    </a>
+    <a class="btn btn-primary btn-sm" href="https://www.rayedwards.com/6weeks">Claim your seat</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">The Cash On Demand Workshop</p>
+    <h1>Build the Offer. Send the Campaign. Collect the Cash — in Two Days.</h1>
+    <p class="sub">A small-group live workshop where we build your high-value offer, write your 5-day email campaign together, and put your first <strong>$30,000&ndash;$60,000</strong> payday in motion &mdash; before day two is over.</p>
+    <p class="byline">With Ray Edwards</p>
+    <div class="avail">
+      <p>This is not a lecture you watch and forget. It's two days of building the real thing &mdash; your offer, your campaign, your invitation to buy &mdash; with me in the room while you do it. You don't leave with notes. You leave with money in motion.</p>
+      <p class="signoff">Ray</p>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="https://www.rayedwards.com/6weeks">Claim your seat</a>
+      <p class="mini">Small group. Seats are limited.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE PROBLEM ============ -->
+<section>
+  <div class="wrap">
+    <p class="lead-in">Let me say something I've watched be true for good people for more than thirty years.</p>
+    <p>You have real wisdom. Real experience. A gift that genuinely changes lives. And somehow you're still the best-kept secret in your market &mdash; underpaid, overworked, and quietly wondering if you missed your moment.</p>
+    <p>It is almost never because you don't know enough. You know plenty. It's because <strong>you've made selling harder than it needs to be.</strong></p>
+    <p>You built the course. You rebuilt the funnel. You rewrote the About page for the ninth time. You've been "getting ready to get ready" for so long that ready started to feel like the destination. And the cash still doesn't show up when you need it.</p>
+    <p>Here's the truth I want to hand you: <strong>money in your business should not be an accident.</strong> It should be something you can create on purpose &mdash; when you decide to. That's the whole idea behind Cash On Demand.</p>
+  </div>
+</section>
+
+<!-- ============ BLEEDING / NEEDING / LEADING ============ -->
+<section>
+  <div class="wrap">
+    <p>Before we go further, one distinction that changes everything &mdash; <strong>who</strong> you build your offer for. There are three kinds of people you can serve:</p>
+    <div class="bnl">
+      <div class="card">
+        <h3>The Bleeding</h3>
+        <p>In crisis. They'll pay anything to stop the pain &mdash; but they're exhausting to serve and rarely stay.</p>
+      </div>
+      <div class="card">
+        <h3>The Needing</h3>
+        <p>Aware they have a gap. Interested, but slow to move and quick to hesitate.</p>
+      </div>
+      <div class="card lead">
+        <h3>The Leading</h3>
+        <p>Already moving. Already winning. Hungry to go faster and reach higher. The leading edge.</p>
+      </div>
+    </div>
+    <p class="bnl-note">The leading edge pays the most, complains the least, and gets the best results. That's who we aim your offer at.</p>
+    <p>When you build the right offer for the right people, selling stops feeling like begging and starts feeling like leadership. That's what we do together over two days.</p>
+  </div>
+</section>
+
+<!-- ============ CASH. ON. DEMAND. beat ============ -->
+<section class="mmm">
+  <div class="wrap">
+    <p class="lead">In three words:</p>
+    <div class="big"><span class="a">Cash.</span> <span class="b">On.</span> <span class="a">Demand.</span></div>
+    <p class="sub">Not hustle. Not hype. Not "post more and pray." A repeatable way to create revenue when you choose to.</p>
+  </div>
+</section>
+
+<!-- ============ WHAT CASH ON DEMAND IS ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">What "Cash On Demand" Actually Is</h2>
+    <p>Cash On Demand is the ability to generate revenue in your business <em>on purpose</em> &mdash; not when the algorithm happens to smile on you, not when a launch finally comes together after six weeks of stress. When you decide it's time, you know exactly what to do to bring money in.</p>
+    <p>It comes down to one skill: <strong>making an irresistible offer to the right people, and inviting them to buy in a way that feels like a gift &mdash; not a grab.</strong></p>
+    <div class="mix">
+      <h3>And here's the part most people miss:</h3>
+      <p style="margin-bottom:0;">Your clients are not paying you for how-to. How-to is everywhere, and most of it is free. <strong>They pay you for two things: proximity and accelerated results.</strong> Access to you. And a faster, surer path to the outcome they want. Once you understand that, you can price and position your work at its true value &mdash; and stop competing with a YouTube video.</p>
+    </div>
+    <p>Over two days, we take that idea and turn it into something concrete: a <strong>heroic offer</strong> built on real value, priced with simple math that works, and a <strong>5-day email campaign</strong> &mdash; written with you, using my <strong>P.A.S.T.O.R.&reg; Framework</strong> &mdash; that does the selling for you.</p>
+  </div>
+</section>
+
+<!-- ============ WHAT THE 2 DAYS LOOK LIKE ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">What the Two Days Look Like</h2>
+
+    <div class="phase">
+      <div class="ph-tag">
+        <span class="ph-num">1</span>
+        <div>
+          <p class="ph-sub">Day One</p>
+          <h2>Build Your Heroic Offer</h2>
+        </div>
+      </div>
+      <p>We start by building the thing that makes everything else work: <strong>an offer people actually want to buy.</strong> We take your wisdom, your experience, and the result you help people get, and we shape it into a clear, compelling, high-value offer &mdash; the kind that's easy to understand, easy to say yes to, and easy for you to deliver.</p>
+      <p>Then we do the math out loud, together. Not the price of this workshop &mdash; <strong>the price of <em>your</em> offer</strong>, and what it produces. You'll see exactly how a small number of the right clients adds up to a real payday. By the end of day one, you'll have an offer on paper and a number you're building toward.</p>
+      <p class="phase-close"><strong>You leave day one with:</strong> a finished, priced, high-value offer &mdash; and total clarity on the math behind it.</p>
+    </div>
+
+    <div class="phase">
+      <div class="ph-tag">
+        <span class="ph-num">2</span>
+        <div>
+          <p class="ph-sub">Day Two</p>
+          <h2>Write the Campaign. Open the Cart. Collect.</h2>
+        </div>
+      </div>
+      <p>Day two is where the money moves. Together we write your <strong>5-day email campaign</strong> using the <strong>P.A.S.T.O.R.&reg; Framework</strong> &mdash; the same structure behind campaigns that have produced an enormous amount of revenue for my clients and me. Problem. Amplify. Story. Transformation. Offer. Response. Step by step, in the room, with my eyes on your words.</p>
+      <p>Then &mdash; and this is the part that makes this different from every workshop you've ever attended &mdash; <strong>you actually open the cart and start collecting.</strong> Not "go home and think about it." Not "someday when it's perfect." You make the invitation and you begin putting your first Cash On Demand payday in motion while you still have support in the room.</p>
+      <p class="phase-close"><strong>You leave day two with:</strong> a written campaign, a live invitation to buy, and cash actively coming in &mdash; not just a plan to make it happen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE MATH (dark band) ============ -->
+<section class="band">
+  <div class="wrap">
+    <span class="seal">&#9733; The Math That Changes Everything</span>
+    <h2>One offer. A small group of the right people. One payday.</h2>
+    <p class="kick">This is the math of <em>your</em> offer &mdash; the one we build together &mdash; not the cost of the workshop.</p>
+    <p>You do not need a giant audience or a viral moment. You need one strong offer and a handful of leading-edge clients who say yes. Watch how fast it adds up:</p>
+    <div class="mathrow">
+      <div class="m">
+        <div class="eq">24 clients &times; $1,250</div>
+        <div class="tot">$30,000</div>
+      </div>
+      <div class="m">
+        <div class="eq">24 clients &times; $2,500</div>
+        <div class="tot">$60,000</div>
+      </div>
+    </div>
+    <p>Same offer. Same campaign. One decision to raise your hand and invite people to buy. That's what "Cash On Demand" means &mdash; and in two days, you'll have built the offer and sent the campaign that makes it real.</p>
+    <p class="disclaimer" style="color:var(--band-muted);">These figures are illustrations to show the math &mdash; not typical or guaranteed results. What you actually earn depends on your effort, your offer, and your audience.</p>
+  </div>
+</section>
+
+<!-- ============ WHAT'S INCLUDED / INVESTMENT ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">What You Get &mdash; and What It Costs</h2>
+    <p>Here's the whole thing, plainly. <strong>It's $1,500.</strong> One payment, one clear offer. And that single price covers a lot more than the two days in the room.</p>
+    <div class="invest-box">
+      <div class="ib-top">
+        <p class="label">Your investment</p>
+        <h2>One price. Everything included.</h2>
+      </div>
+      <div class="invest-solo">
+        <div class="amt">$1,500</div>
+        <div class="when">One payment &mdash; that's the whole thing</div>
+        <ul class="included">
+          <li><strong>The 2-day live Cash On Demand Workshop</strong> &mdash; build your offer, write your campaign, and start collecting, with me guiding you the whole way.</li>
+          <li><strong>Two full months of coaching afterward</strong> &mdash; so you don't just leave inspired, you leave and actually execute, sell, and collect with support behind you.</li>
+        </ul>
+      </div>
+    </div>
+    <p>I built it this way on purpose. The workshop lights the fire; <strong>the two months of coaching make sure it keeps burning.</strong> Most people can create a great offer in a room full of energy. The difference between the ones who cash in and the ones who don't is what happens in the weeks that follow &mdash; so I'm staying with you for it.</p>
+    <p class="profitable">One offer, built right, can return your entire investment many times over in a single campaign. That's the whole point: this shouldn't cost you money. Done right, it pays you.</p>
+  </div>
+  <div class="cta-block">
+    <a class="btn btn-primary btn-lg" href="https://www.rayedwards.com/6weeks">Claim your seat</a>
+  </div>
+</section>
+
+<!-- ============ WHO IT'S FOR ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">Who This Is For</h2>
+    <p>This workshop is built for people who already have something real to offer &mdash; wisdom, skill, and experience worth paying for:</p>
+    <div class="fit yes">
+      <h3>This is for you if you're a&hellip;</h3>
+      <ul>
+        <li><strong>Coach or consultant</strong> who helps people get a meaningful result.</li>
+        <li><strong>Author or speaker</strong> with a message and a following you'd like to monetize better.</li>
+        <li><strong>Course creator or membership owner</strong> who knows there's more revenue in your audience than you're currently collecting.</li>
+        <li>Expert or service-based entrepreneur ready to <strong>serve the leading edge</strong> and be paid what your work is worth.</li>
+      </ul>
+    </div>
+    <div class="fit no">
+      <h3>It's not for you if you&hellip;</h3>
+      <ul>
+        <li>Are brand new with <strong>nothing yet to teach or offer</strong> &mdash; no experience, no skill, no result you can help someone get.</li>
+        <li>Want a <strong>magic hack</strong> or a push-button system that works without you making an offer and inviting people to buy.</li>
+        <li>Aren't willing to <strong>actually build, send, and sell</strong> during the two days. This is a working room, not a webinar you half-watch.</li>
+      </ul>
+    </div>
+    <p class="turn"><em>If you've got the wisdom and you're willing to do the work, this is your room.</em></p>
+  </div>
+</section>
+
+<!-- ============ PROOF / AUTHORITY ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">Why Listen to Me</h2>
+    <p>I've spent decades writing copy, building offers, and helping experts turn their message into money. My work has helped produce an estimated <strong>$1 billion in online sales</strong>. I created the <strong>P.A.S.T.O.R. Framework&reg;</strong> for writing persuasion that serves instead of manipulates. And I've had the privilege of working with or serving people and brands connected to names like Tony Robbins, Michael Hyatt, Jeff Walker, Dan Miller, Jack Canfield, and Frank Kern, among many others.</p>
+    <p>I'm telling you that not to impress you, but to make you a promise: <strong>the offer and the campaign we build in these two days are built on the same fundamentals behind all of it.</strong> You're not getting theory. You're getting the exact way I've done this for years &mdash; applied to your business, with my hands on the work alongside yours.</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">Questions People Ask</h2>
+    <div class="faq">
+      <div class="item">
+        <p class="q">Is $1,500 really the whole price?</p>
+        <p class="a">Yes. One payment of $1,500. It covers the full 2-day live workshop <strong>and</strong> two full months of coaching afterward. One offer, one price &mdash; nothing hidden.</p>
+      </div>
+      <div class="item">
+        <p class="q">What if I don't have an offer yet?</p>
+        <p class="a">Perfect &mdash; that's exactly what day one is for. We build your high-value offer together, from your wisdom and experience, right there in the room.</p>
+      </div>
+      <div class="item">
+        <p class="q">Do I need a big audience?</p>
+        <p class="a">No. You need a way to reach some people &mdash; an email list, a following, past clients, even a warm network. The whole point of the math is that a <em>small</em> number of the right people creates a real payday. If you can invite people, you can do this.</p>
+      </div>
+      <div class="item">
+        <p class="q">What will I actually walk away with?</p>
+        <p class="a">A finished, priced, high-value offer. A written 5-day email campaign. A live invitation to buy that's already collecting. And two months of coaching to help you keep it going.</p>
+      </div>
+      <div class="item">
+        <p class="q">What if I've never written a sales email in my life?</p>
+        <p class="a">Good. We write it together using the P.A.S.T.O.R.&reg; Framework, step by step, with my eyes on your words. You don't need to be a copywriter &mdash; you just need to show up and build.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">Claim Your Seat</h2>
+    <p>This is a small group on purpose &mdash; because on day two, I want to be able to look at your offer, read your campaign, and help you personally as you open the cart. That only works with a limited number of people in the room.</p>
+    <p><strong>If you're ready to stop getting ready and start collecting:</strong></p>
+    <ul class="steps">
+      <li><b>Step 1:</b> Claim one of the limited seats.</li>
+      <li><b>Step 2:</b> Show up for two days ready to build &mdash; and walk out with your offer, your campaign, and your first Cash On Demand payday in motion.</li>
+    </ul>
+    <div class="cta-block">
+      <a class="btn btn-primary btn-lg" href="https://www.rayedwards.com/6weeks">Claim your seat</a>
+      <p class="mini">Small group. Seats are limited.</p>
+    </div>
+    <p class="signoff" style="font-size:1.2rem;">Ray</p>
+    <div class="ps">
+      <p><span class="lab">P.S.</span> Almost everyone who's read this far already has the wisdom, the experience, and the audience they need. What's been missing isn't knowledge &mdash; it's a clear offer and the campaign to sell it. That's the whole thing we build in two days. Come build it with me.</p>
+      <p class="disclaimer">The income figures on this page are examples used to illustrate the method &mdash; they are not typical or guaranteed. Your results depend on your effort, your offer, and your audience.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="wordmark">
+      <span class="name">RAY <b>EDWARDS</b></span>
+    </span>
+    <p class="fine">&copy; 2026 Ray Edwards International &middot; The Cash On Demand Workshop</p>
+    <p class="disclaimer-foot">Earnings disclaimer: The income figures referenced on this page ($30,000, $60,000, and others) are illustrations of the method, not typical or guaranteed results. Your results depend on your effort, your offer, your audience, and factors outside our control. Nothing here is a promise or guarantee of income.</p>
+  </div>
+</footer>
+
+</div><!-- /#cod-workshop -->
+</body>
+</html>
