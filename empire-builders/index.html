@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Empire Builders — A Flag in the Ground for the New Economy · Ray Edwards</title>
+<meta name="description" content="Empire Builders is a hybrid coaching mastermind with Ray Edwards. Stabilize your income, systematize your business, and build toward $10,000/month as a floor. Weekly working calls. $250/month, month-to-month.">
+<style>
+  /* ============================================================
+     EMPIRE BUILDERS — long-form offer page
+     "The Copywriter's Page" system: ink & paper, red = craft/
+     persuasion, gold = prosperity/purpose. Dual-theme, self-
+     contained, CSP-safe. All rules scoped under #empire-builders.
+     ============================================================ */
+
+  #empire-builders{
+    --paper:#FCFBF7; --raised:#FFFFFF; --ink:#17140F; --muted:#6B6357;
+    --hair:#E7E2D6; --gold-line:rgba(180,131,43,.42);
+    --red:#DA2C1F; --red-strong:#BE2117; --gold:#B4832B; --gold-tint:rgba(180,131,43,.10);
+    --red-tint:rgba(218,44,31,.06);
+    --band:#17140F; --band-raised:#221E17; --band-ink:#FCFBF7; --band-muted:#B7AE9C; --band-red:#FF6250; --band-gold:#D9A94A;
+    --focus:#DA2C1F;
+    --font-display:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-serif:Georgia, "Times New Roman", "Iowan Old Style", serif;
+    --font-label:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    --content:760px; --gutter:24px;
+  }
+  @media (prefers-color-scheme: dark){
+    #empire-builders{
+      --paper:#151310; --raised:#1E1B16; --ink:#F3EEE2; --muted:#A79E8C;
+      --hair:#332E25; --gold-line:rgba(217,169,74,.34);
+      --red:#FF5442; --red-strong:#C63125; --gold:#D9A94A; --gold-tint:rgba(217,169,74,.10);
+      --red-tint:rgba(255,84,66,.08);
+      --band:#0F0D0A; --band-raised:#1E1B16; --band-ink:#F3EEE2; --band-muted:#A79E8C; --band-red:#FF5442; --band-gold:#D9A94A;
+      --focus:#FF5442;
+    }
+  }
+  :root[data-theme="light"] #empire-builders{
+    --paper:#FCFBF7; --raised:#FFFFFF; --ink:#17140F; --muted:#6B6357;
+    --hair:#E7E2D6; --gold-line:rgba(180,131,43,.42);
+    --red:#DA2C1F; --red-strong:#BE2117; --gold:#B4832B; --gold-tint:rgba(180,131,43,.10); --red-tint:rgba(218,44,31,.06);
+    --band:#17140F; --band-raised:#221E17; --band-ink:#FCFBF7; --band-muted:#B7AE9C; --band-red:#FF6250; --band-gold:#D9A94A;
+    --focus:#DA2C1F;
+  }
+  :root[data-theme="dark"] #empire-builders{
+    --paper:#151310; --raised:#1E1B16; --ink:#F3EEE2; --muted:#A79E8C;
+    --hair:#332E25; --gold-line:rgba(217,169,74,.34);
+    --red:#FF5442; --red-strong:#C63125; --gold:#D9A94A; --gold-tint:rgba(217,169,74,.10); --red-tint:rgba(255,84,66,.08);
+    --band:#0F0D0A; --band-raised:#1E1B16; --band-ink:#F3EEE2; --band-muted:#A79E8C; --band-red:#FF5442; --band-gold:#D9A94A;
+    --focus:#FF5442;
+  }
+
+  #empire-builders,
+  #empire-builders *{box-sizing:border-box;}
+  #empire-builders{scroll-behavior:smooth;margin:0;font-family:var(--font-serif);color:var(--ink);background:var(--paper);
+    font-size:19px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  #empire-builders a{color:inherit;}
+  #empire-builders p{margin:0 0 1.15em;}
+  #empire-builders strong{font-weight:700;}
+  #empire-builders em{font-style:italic;}
+  #empire-builders h1,#empire-builders h2,#empire-builders h3{margin:0;font-family:var(--font-display);font-weight:900;letter-spacing:-.03em;line-height:1.04;text-wrap:balance;}
+  #empire-builders :focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:2px;}
+
+  #empire-builders .wrap{max-width:var(--content);margin:0 auto;padding:0 var(--gutter);}
+  #empire-builders .label{font-family:var(--font-label);text-transform:uppercase;letter-spacing:.14em;font-weight:700;font-size:.72rem;}
+
+  /* Buttons */
+  #empire-builders .btn{display:inline-flex;align-items:center;gap:.5em;justify-content:center;font-family:var(--font-label);
+    font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;padding:16px 30px;border-radius:2px;
+    cursor:pointer;border:1.5px solid transparent;text-decoration:none;text-align:center;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;}
+  #empire-builders .btn-primary{background:var(--red-strong);color:#fff;box-shadow:0 8px 22px rgba(190,33,23,.26);}
+  #empire-builders .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(190,33,23,.32);}
+  #empire-builders .btn-sm{padding:11px 18px;font-size:.7rem;letter-spacing:.06em;}
+  #empire-builders .btn-lg{padding:19px 34px;font-size:.88rem;}
+
+  /* Header */
+  #empire-builders header.site{position:sticky;top:0;z-index:60;background:var(--paper);border-bottom:1px solid var(--hair);}
+  @supports (backdrop-filter:blur(6px)){#empire-builders header.site{background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:saturate(140%) blur(10px);-webkit-backdrop-filter:saturate(140%) blur(10px);}}
+  #empire-builders .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;height:70px;max-width:960px;margin:0 auto;padding:0 var(--gutter);}
+  #empire-builders .wordmark{display:flex;flex-direction:column;line-height:1;}
+  #empire-builders .wordmark .name{font-family:var(--font-display);font-weight:900;font-size:1.1rem;letter-spacing:.02em;}
+  #empire-builders .wordmark .name b{color:var(--red);}
+  #empire-builders .wordmark .tag{font-family:var(--font-serif);font-style:italic;font-size:.72rem;color:var(--muted);margin-top:5px;}
+
+  /* Hero */
+  #empire-builders .hero{padding:66px 0 44px;text-align:center;}
+  #empire-builders .hero .kicker{font-family:var(--font-label);text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:700;color:var(--gold);margin-bottom:20px;}
+  #empire-builders .hero h1{font-size:clamp(2.4rem,6.2vw,4.2rem);}
+  #empire-builders .hero .promise{font-family:var(--font-serif);color:var(--ink);margin-top:22px;font-size:1.2rem;max-width:60ch;margin-left:auto;margin-right:auto;}
+  #empire-builders .hero .byline{font-family:var(--font-serif);font-style:italic;color:var(--muted);margin-top:16px;font-size:1.02rem;}
+  #empire-builders .avail{max-width:640px;margin:30px auto 0;background:var(--raised);border:1px solid var(--hair);border-top:3px solid var(--red);
+    padding:24px 28px;text-align:left;box-shadow:0 14px 34px rgba(23,20,15,.08);}
+  #empire-builders .avail p:last-child{margin-bottom:0;}
+  #empire-builders .hero-cta{margin-top:34px;}
+  #empire-builders .hero-cta .mini{font-family:var(--font-serif);font-style:italic;color:var(--muted);margin-top:14px;font-size:.98rem;}
+  #empire-builders .signoff{font-family:var(--font-serif);font-style:italic;font-size:1.15rem;color:var(--ink);margin-top:8px;}
+
+  /* Urgency kicker near CTAs */
+  #empire-builders .seats-tag{display:inline-flex;align-items:center;gap:12px;margin:0 0 16px;font-family:var(--font-label);text-transform:uppercase;letter-spacing:.16em;font-size:.66rem;font-weight:700;color:var(--red);}
+  #empire-builders .seats-tag::before,#empire-builders .seats-tag::after{content:"";width:22px;height:1px;background:var(--red);opacity:.45;}
+
+  /* Prose rhythm */
+  #empire-builders main section{padding:20px 0;}
+  #empire-builders .lead-in{font-size:1.16rem;}
+  #empire-builders .divider{max-width:var(--content);margin:26px auto;height:1px;background:var(--gold-line);}
+
+  /* Stabilize. Systematize. Scale. beat */
+  #empire-builders .mmm{text-align:center;padding:44px 0 40px;}
+  #empire-builders .mmm .lead{font-family:var(--font-serif);font-style:italic;color:var(--muted);margin-bottom:18px;}
+  #empire-builders .mmm .big{font-family:var(--font-display);font-weight:900;letter-spacing:-.04em;line-height:1.05;
+    font-size:clamp(2.1rem,6vw,3.6rem);}
+  #empire-builders .mmm .big .a{color:var(--red);}
+  #empire-builders .mmm .big .b{color:var(--gold);}
+  #empire-builders .mmm .sub{font-family:var(--font-serif);font-style:italic;color:var(--muted);font-size:1.2rem;margin-top:16px;}
+
+  /* generic bullet list */
+  #empire-builders ul.list{list-style:none;padding:0;margin:0 0 1.15em;}
+  #empire-builders ul.list li{position:relative;padding-left:26px;margin-bottom:.5em;}
+  #empire-builders ul.list li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;background:var(--red);border-radius:1px;transform:rotate(45deg);}
+
+  /* checkmark list (what you get) */
+  #empire-builders ul.checklist{list-style:none;padding:0;margin:0 0 1.15em;display:flex;flex-direction:column;gap:12px;}
+  #empire-builders ul.checklist li{position:relative;padding-left:30px;}
+  #empire-builders ul.checklist li::before{content:"\2713";position:absolute;left:0;top:.02em;color:var(--gold);font-weight:700;font-family:var(--font-label);}
+
+  /* fit cards: not-for-you / but-if-you */
+  #empire-builders .fit{background:var(--raised);border:1px solid var(--hair);padding:28px 30px;margin:12px 0;}
+  #empire-builders .fit.no{border-left:4px solid var(--red);background:var(--red-tint);}
+  #empire-builders .fit.yes{border-left:4px solid var(--gold);background:var(--gold-tint);}
+  #empire-builders .fit h3{font-family:var(--font-display);font-size:1.35rem;font-weight:900;letter-spacing:-.02em;margin-bottom:16px;}
+  #empire-builders .fit ul{list-style:none;padding:0;margin:0;}
+  #empire-builders .fit li{position:relative;padding-left:30px;margin-bottom:.7em;}
+  #empire-builders .fit li:last-child{margin-bottom:0;}
+  #empire-builders .fit.no li::before{content:"\2715";position:absolute;left:0;top:.05em;color:var(--red);font-weight:700;font-family:var(--font-label);}
+  #empire-builders .fit.yes li::before{content:"\2713";position:absolute;left:0;top:.05em;color:var(--gold);font-weight:700;font-family:var(--font-label);}
+  #empire-builders .turn{font-family:var(--font-serif);font-style:italic;font-size:1.3rem;text-align:center;color:var(--red);margin:26px 0;}
+
+  #empire-builders .mix{background:var(--raised);border:1px solid var(--hair);border-top:3px solid var(--gold);padding:26px 30px;margin:20px 0;}
+  #empire-builders .mix h3{font-family:var(--font-display);font-size:1.2rem;font-weight:800;margin-bottom:14px;letter-spacing:-.02em;}
+  #empire-builders .mix .htag{font-family:var(--font-label);text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;font-weight:700;color:var(--gold);margin-bottom:6px;}
+
+  /* Schedule detail card */
+  #empire-builders .schedule{background:var(--raised);border:1px solid var(--hair);border-top:3px solid var(--gold);padding:20px 24px;margin:8px 0 22px;text-align:center;}
+  #empire-builders .schedule .d{display:block;font-family:var(--font-display);font-weight:900;font-size:1.3rem;letter-spacing:-.02em;color:var(--ink);}
+  #empire-builders .schedule .t{display:block;font-family:var(--font-label);text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;font-weight:700;color:var(--muted);margin-top:8px;}
+  #empire-builders .schedule .r{display:block;font-family:var(--font-serif);font-style:italic;font-size:.98rem;color:var(--muted);margin-top:10px;}
+
+  /* Phases (The Path) */
+  #empire-builders .phase{margin:14px 0;padding-top:26px;border-top:1px solid var(--gold-line);}
+  #empire-builders .phase .ph-tag{display:flex;align-items:baseline;gap:16px;margin-bottom:14px;}
+  #empire-builders .phase .ph-num{font-family:var(--font-display);font-weight:900;font-size:2.6rem;line-height:.8;color:var(--gold);letter-spacing:-.04em;}
+  #empire-builders .phase h2{font-size:clamp(1.7rem,4vw,2.3rem);}
+  #empire-builders .phase .ph-sub{font-family:var(--font-label);text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;font-weight:700;color:var(--muted);margin-bottom:4px;}
+  #empire-builders .phase-close{border-left:3px solid var(--gold);padding:4px 0 4px 20px;font-family:var(--font-serif);font-style:italic;color:var(--ink);font-size:1.1rem;margin-top:6px;}
+
+  /* Investment box — MONEY MOMENT (single price) */
+  #empire-builders .invest-box{background:var(--raised);border:1px solid var(--hair);box-shadow:0 22px 54px rgba(23,20,15,.14);
+    margin:22px 0 26px;overflow:hidden;}
+  #empire-builders .invest-box .ib-top{background:var(--band);color:var(--band-ink);padding:20px 30px;text-align:center;}
+  #empire-builders .invest-box .ib-top .label{color:var(--band-gold);}
+  #empire-builders .invest-box .ib-top h2{color:var(--band-ink);font-size:1.7rem;margin-top:6px;}
+  #empire-builders .invest-solo{padding:34px 30px;text-align:center;}
+  #empire-builders .invest-solo .amt{font-family:var(--font-display);font-weight:900;letter-spacing:-.04em;font-size:4rem;line-height:1;color:var(--red);font-variant-numeric:tabular-nums;}
+  #empire-builders .invest-solo .when{font-family:var(--font-label);text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:700;color:var(--muted);margin-top:14px;}
+  #empire-builders .invest-solo .terms{font-size:1.02rem;color:var(--ink);margin:20px auto 0;max-width:52ch;}
+  #empire-builders .profitable{font-family:var(--font-serif);font-style:italic;font-size:1.18rem;text-align:center;color:var(--gold);margin:8px auto 4px;max-width:56ch;}
+
+  /* Guarantee — MONEY MOMENT (deep band) */
+  #empire-builders .guarantee{background:var(--band);color:var(--band-ink);border-top:1px solid var(--gold-line);border-bottom:1px solid var(--gold-line);
+    padding:56px 0;margin:34px 0;}
+  #empire-builders .guarantee .wrap{max-width:720px;}
+  #empire-builders .guarantee .seal{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--band-gold);color:var(--band-gold);
+    font-family:var(--font-label);text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;font-weight:700;padding:9px 16px;border-radius:2px;margin-bottom:20px;}
+  #empire-builders .guarantee h2{color:var(--band-ink);font-size:clamp(1.8rem,4.4vw,2.6rem);margin-bottom:18px;}
+  #empire-builders .guarantee p{color:var(--band-muted);}
+  #empire-builders .guarantee p strong,#empire-builders .guarantee em{color:var(--band-ink);}
+  #empire-builders .guarantee .kick{font-family:var(--font-serif);font-style:italic;font-size:1.15rem;color:var(--band-ink);}
+
+  /* Who you'll work with */
+  #empire-builders .qual{list-style:none;counter-reset:q;padding:0;margin:0 0 1.15em;}
+  #empire-builders .qual li{position:relative;padding-left:44px;margin-bottom:.85em;}
+  #empire-builders .qual li::before{counter-increment:q;content:counter(q);position:absolute;left:0;top:0;width:28px;height:28px;
+    background:var(--band);color:var(--band-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-display);font-weight:800;font-size:.9rem;}
+
+  /* Steps */
+  #empire-builders .steps{list-style:none;padding:0;margin:16px 0 1.15em;}
+  #empire-builders .steps li{background:var(--raised);border:1px solid var(--hair);padding:18px 22px;margin-bottom:12px;}
+  #empire-builders .steps li b{font-family:var(--font-display);color:var(--red);letter-spacing:-.01em;}
+
+  /* FAQ */
+  #empire-builders .faq{margin:16px 0 8px;}
+  #empire-builders .faq .item{background:var(--raised);border:1px solid var(--hair);border-left:3px solid var(--gold);padding:20px 24px;margin-bottom:12px;}
+  #empire-builders .faq .q{font-family:var(--font-display);font-weight:800;font-size:1.08rem;letter-spacing:-.01em;margin-bottom:8px;}
+  #empire-builders .faq .a{margin-bottom:0;color:var(--ink);}
+
+  /* CTA blocks */
+  #empire-builders .cta-block{text-align:center;padding:40px 0 20px;}
+  #empire-builders .cta-block .mini{font-family:var(--font-serif);font-style:italic;color:var(--muted);margin-top:14px;}
+
+  /* P.S. / closing */
+  #empire-builders .ps{background:var(--raised);border:1px solid var(--hair);border-left:4px solid var(--gold);padding:26px 30px;margin:24px 0;}
+  #empire-builders .ps .lab{font-family:var(--font-display);font-weight:900;color:var(--red);margin-right:6px;}
+
+  /* Disclaimer */
+  #empire-builders .disclaimer{font-size:.86rem;font-style:italic;color:var(--muted);margin-top:8px;}
+
+  /* Footer */
+  #empire-builders footer.site{background:var(--band);color:var(--band-muted);padding:44px 0;border-top:1px solid var(--gold-line);margin-top:40px;text-align:center;}
+  #empire-builders footer .wordmark{align-items:center;display:inline-flex;}
+  #empire-builders footer .wordmark .name{color:var(--band-ink);}
+  #empire-builders footer .wordmark .name b{color:var(--band-red);}
+  #empire-builders footer .fine{font-family:var(--font-label);text-transform:uppercase;letter-spacing:.08em;font-size:.66rem;font-weight:700;margin-top:18px;color:var(--band-muted);}
+  #empire-builders footer .disclaimer-foot{font-family:var(--font-serif);font-style:normal;font-size:.82rem;line-height:1.5;color:var(--band-muted);max-width:640px;margin:16px auto 0;opacity:.9;}
+
+  #empire-builders h2.sec{font-size:clamp(1.7rem,4vw,2.3rem);margin:10px 0 8px;}
+
+  @media (prefers-reduced-motion:reduce){#empire-builders *{animation:none !important;transition:none !important;scroll-behavior:auto !important;}}
+
+  @media (max-width:640px){
+    #empire-builders{font-size:18px;}
+    #empire-builders .nav .wordmark .tag{display:none;}
+    #empire-builders .nav .btn{display:none;}
+    #empire-builders .hero{padding:48px 0 36px;}
+  }
+</style>
+</head>
+<body>
+<div id="empire-builders">
+
+<!-- ============ HEADER ============ -->
+<header class="site">
+  <div class="nav">
+    <a class="wordmark" href="#top" aria-label="Ray Edwards home">
+      <span class="name">RAY <b>EDWARDS</b></span>
+      <span class="tag">Prosperity With Purpose</span>
+    </a>
+    <a class="btn btn-primary btn-sm" href="ENROLLMENT_URL_TBD">Enroll in Empire Builders &rarr; $250/month</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">The Empire Builders Offer</p>
+    <h1>A Flag in the Ground for the New Economy</h1>
+    <p class="promise">Stabilize your income, systematize your business, and reach <strong>$10,000 a month</strong> &mdash; not as a moving goal you keep chasing, but as a <strong>floor you can count on</strong>.</p>
+    <p class="byline">With Ray Edwards</p>
+    <div class="avail">
+      <p><strong>Next enrollment window closes: Monday, July 27, 2026.</strong> The doors are open now. When they close, they're closed until the next monthly window. If you've been waiting for the right time to stop guessing and start building on solid ground, this is it.</p>
+      <p class="signoff">Ray</p>
+    </div>
+    <div class="hero-cta">
+      <p class="seats-tag">Enrollment Closes July 27</p>
+      <a class="btn btn-primary btn-lg" href="ENROLLMENT_URL_TBD">Enroll in Empire Builders &rarr; $250/month</a>
+      <p class="mini">Month-to-month. Cancel anytime. No contract.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPENING LETTER ============ -->
+<section>
+  <div class="wrap">
+    <p class="lead-in">The ground is shifting under all of us.</p>
+    <p>AI is rewriting how business gets done. Markets are moving in ways nobody fully predicted. And the old hustle-and-grind gospel &mdash; work harder, post more, hustle until you break &mdash; is quietly falling apart, taking a lot of good entrepreneurs down with it.</p>
+    <p>You already know this, because you've felt it. You have real clients. Real revenue. A genuine track record. You are not a beginner. But lately the income feels less certain than it used to, the work depends too much on <em>you</em> personally, and the future feels harder to plan for.</p>
+    <p>Here's what I want you to know: <strong>the answer is not more hustle.</strong> The answer is stability. Systems. A business that holds together whether or not you're firing on all cylinders that week. That's what we build in Empire Builders &mdash; together, on purpose, every single week.</p>
+  </div>
+</section>
+
+<!-- ============ STABILIZE. SYSTEMATIZE. SCALE. beat ============ -->
+<section class="mmm">
+  <div class="wrap">
+    <p class="lead">Three words:</p>
+    <div class="big"><span class="a">Stabilize.</span> <span class="b">Systematize.</span> <span class="a">Scale.</span></div>
+    <p class="sub">Not hustle. Not hype. A floor you can stand on &mdash; and then build from.</p>
+  </div>
+</section>
+
+<!-- ============ WHO IT'S FOR / NOT FOR ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">Is This You?</h2>
+    <p>Empire Builders is built for a specific kind of person &mdash; someone who has already done the hard work of getting into business, and now wants to make it <em>solid</em>.</p>
+    <div class="fit yes">
+      <h3>This is for you if you&hellip;</h3>
+      <ul>
+        <li>Are an <strong>experienced entrepreneur, coach, or service provider</strong> with real clients, real revenue, and a real track record.</li>
+        <li>Feel the ground shifting &mdash; <strong>AI, market shifts, hustle-culture burnout</strong> &mdash; and want to get ahead of it instead of reacting to it.</li>
+        <li>Want to <strong>stabilize your income</strong> so it stops swinging wildly from month to month.</li>
+        <li>Want to <strong>systematize your business</strong> so it no longer depends entirely on you being "on."</li>
+        <li>Are ready to build steadily toward <strong>$10,000 a month as a floor</strong> &mdash; and beyond.</li>
+      </ul>
+    </div>
+    <div class="fit no">
+      <h3>It's not for you if you&hellip;</h3>
+      <ul>
+        <li>Are hunting for a <strong>quick fix or a clever "hack"</strong> that works without steady effort.</li>
+        <li>Are chasing <strong>8-figure, venture-backed, unicorn-scale</strong> fantasies. That's a different game and a different room.</li>
+        <li>Aren't willing to <strong>show up weekly</strong> and do the work between calls.</li>
+        <li>Are <strong>brand new with no revenue yet</strong> &mdash; there's nothing here to stabilize until you've made real sales.</li>
+      </ul>
+    </div>
+    <p class="turn"><em>If the first list sounds like you, keep reading. This was built for you.</em></p>
+  </div>
+</section>
+
+<!-- ============ WHAT IT IS ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">What Empire Builders Actually Is</h2>
+    <p>Let me be clear about what this is &mdash; and what it isn't. Empire Builders is a <strong>hybrid coaching mastermind</strong>. It is a <strong>working group</strong>, not a course. Not a video library you'll never finish. Not a lecture you passively sit through and forget by Friday.</p>
+    <p>Here's how it works: <strong>you show up every week, you bring a real problem from your actual business, and you leave with a next step you can take that same week.</strong> You get direct feedback and honest accountability &mdash; from a room full of serious peers, and from me.</p>
+    <div class="mix">
+      <h3>This is a room, not a recording.</h3>
+      <p style="margin-bottom:0;">The magic isn't in the content &mdash; content is everywhere. The magic is in a small group of committed, revenue-generating entrepreneurs putting their collective brainpower on <em>your</em> business, week after week, while someone who's done this for two decades helps you steer. That's what moves the needle.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE HYBRID STRUCTURE ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">How the Week Works</h2>
+    <div class="schedule">
+      <span class="d">Thursdays, 8:00 AM Pacific</span>
+      <span class="t">Two hours, every week &middot; Live on video, facilitated by Ray</span>
+      <span class="r">Focus topics are announced a week ahead, so you always show up ready to work.</span>
+    </div>
+
+    <div class="mix">
+      <p class="htag">Hour One &mdash; The Mastermind Meeting</p>
+      <ul class="list">
+        <li><strong>Wins Round (10 min).</strong> We open by naming real progress &mdash; yours and the group's. Momentum is built on it.</li>
+        <li><strong>Accountability Check (15 min).</strong> Did you do what you said you'd do last week? We find out, kindly and honestly.</li>
+        <li><strong>Focus Topic (30 min).</strong> A facilitated deep-dive on one growth lever &mdash; announced a week ahead so you arrive prepared.</li>
+        <li><strong>Bridge (5 min).</strong> We connect the topic straight to the action you'll take this week.</li>
+      </ul>
+    </div>
+
+    <div class="mix">
+      <p class="htag">Hour Two &mdash; Spotlights &amp; Open Q&amp;A</p>
+      <ul class="list">
+        <li><strong>Spotlights (up to 45 min).</strong> Your hot seat &mdash; fifteen minutes of the group's collective brainpower aimed squarely at your business, your bottleneck, your next move.</li>
+        <li><strong>Open Q&amp;A.</strong> Bring anything you're wrestling with. Nothing is too small, and nothing is off-limits.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE PATH ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">The Path</h2>
+
+    <div class="phase">
+      <div class="ph-tag">
+        <span class="ph-num">1</span>
+        <div>
+          <p class="ph-sub">Phase 1 &middot; Months 1&ndash;3</p>
+          <h2>Stabilize</h2>
+        </div>
+      </div>
+      <p>First, we stop the bleeding and steady the ship. We identify what's already working in your business and <strong>systematize it</strong> &mdash; so it becomes repeatable instead of accidental. The goal of these first three months is simple and concrete: <strong>a first stable base of $3,000&ndash;$5,000 in monthly revenue you can actually count on.</strong> Not a lucky month. A floor.</p>
+      <p class="phase-close"><strong>That's Phase 1:</strong> predictable income, working systems, and the calm that comes from standing on solid ground.</p>
+    </div>
+
+    <div class="phase">
+      <div class="ph-tag">
+        <span class="ph-num">2</span>
+        <div>
+          <p class="ph-sub">Phase 2 &middot; Month 4 and beyond</p>
+          <h2>Scale</h2>
+        </div>
+      </div>
+      <p>Once the base is stable, we build. Now we add <strong>leverage</strong> &mdash; the offers, systems, and structures that let your revenue grow without your hours growing with it &mdash; and we climb toward <strong>$10,000 a month and beyond</strong>. This is where "a floor you can count on" turns into real, durable growth.</p>
+      <p class="phase-close"><strong>That's Phase 2:</strong> steady, systematic scale &mdash; built to last, not built to burn you out.</p>
+    </div>
+  </div>
+  <div class="cta-block">
+    <p class="seats-tag">Enrollment Closes July 27</p>
+    <a class="btn btn-primary btn-lg" href="ENROLLMENT_URL_TBD">Enroll in Empire Builders &rarr; $250/month</a>
+  </div>
+</section>
+
+<!-- ============ WHAT YOU GET ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">What You Get</h2>
+    <ul class="checklist">
+      <li><strong>Weekly 2-hour group coaching</strong> &mdash; facilitated live by Ray, every Thursday.</li>
+      <li><strong>Accountability architecture</strong> &mdash; the structure that keeps you moving between calls, not just inspired on them.</li>
+      <li><strong>A serious peer mastermind</strong> &mdash; committed, revenue-generating members who show up to work, not to lurk.</li>
+      <li><strong>Direct access to Ray on every single call</strong> &mdash; not a moderator, not a stand-in. Me.</li>
+      <li><strong>A private Skool community</strong> &mdash; for support, questions, and momentum all week long.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ WHO YOU'LL WORK WITH ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">Who You'll Work With</h2>
+    <p>My name is <strong>Ray Edwards</strong>. I've been a professional copywriter and business coach for more than 20 years. In that time I've had the privilege of working with people like <strong>Tony Robbins, Michael Hyatt, Donald Miller, and Amy Porterfield</strong>, along with thousands of entrepreneurs you haven't heard of yet.</p>
+    <p>Here's the most important thing to know about how I coach: <strong>I'm a systems guy, not a hype guy.</strong> I'm not going to tell you to raise your vibration, hustle harder, or manifest your way to money. We're going to look at your numbers, your offer, your message, and your systems &mdash; and we're going to fix the actual thing that's holding you back. Then we do it again next week.</p>
+  </div>
+</section>
+
+<!-- ============ THE INVESTMENT ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">The Investment</h2>
+    <p>One price. No tiers, no upsells, no "founding member" games. Everything you've read about &mdash; the weekly calls, the accountability, the mastermind, direct access to me, and the Skool community &mdash; is included for a single monthly investment.</p>
+    <div class="invest-box">
+      <div class="ib-top">
+        <p class="label">Your investment</p>
+        <h2>One price. Month to month.</h2>
+      </div>
+      <div class="invest-solo">
+        <div class="amt">$250<span style="font-size:1.3rem;font-weight:400;">/month</span></div>
+        <div class="when">Cancel anytime &middot; No annual lock-in &middot; No contract</div>
+        <p class="terms">It's month-to-month, and you can cancel anytime. Most members who get real value from the room end up staying six months or more &mdash; but that's their choice, made one month at a time, never a contract.</p>
+      </div>
+    </div>
+    <p class="profitable">Stabilize one month of income and the membership has already paid for itself many times over. That's the whole idea: this shouldn't be a cost you carry &mdash; it should be the thing that makes everything else pay.</p>
+  </div>
+</section>
+
+<!-- ============ GUARANTEE ============ -->
+<section class="guarantee">
+  <div class="wrap">
+    <span class="seal">&#9733; 30-Day Promise</span>
+    <h2>The 30-Day Money-Back Guarantee</h2>
+    <p class="kick">I'll make this simple: try it, and if it's not for you, get your money back.</p>
+    <p>Here's my promise. Enroll, and <strong>attend your first four Thursday calls</strong>. Show up, bring a real problem, and see how the room works. If by the end of those first 30 days you decide Empire Builders isn't for you &mdash; for any reason &mdash; just tell me, and you'll get a <strong>full refund</strong>. No arm-twisting, no hard feelings.</p>
+    <p style="margin-bottom:0;">The only thing I ask is that you actually show up and give it a real look. Do that, and the risk is entirely on me.</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">Questions People Ask</h2>
+    <div class="faq">
+      <div class="item">
+        <p class="q">How is this different from other group coaching?</p>
+        <p class="a">Most group coaching is a lecture with a comment box. Empire Builders is a <strong>working mastermind</strong> &mdash; you get a real hot seat where the group and I put our brainpower on your specific business. You don't just listen. You get worked on, and you leave with action.</p>
+      </div>
+      <div class="item">
+        <p class="q">What if I miss a week?</p>
+        <p class="a">Life happens, and missing a week won't sink you. But I'll be honest: <strong>consistency is where the results live.</strong> The members who show up week after week are the ones who see their income stabilize and grow. Come as often as you can &mdash; and aim to make it most weeks.</p>
+      </div>
+      <div class="item">
+        <p class="q">What if the group dynamic just doesn't work for me?</p>
+        <p class="a">That's exactly what the <strong>30-day money-back guarantee</strong> is for. Attend your first four calls, feel out the room, and if it's not the right fit, tell me inside 30 days for a full refund.</p>
+      </div>
+      <div class="item">
+        <p class="q">Can I do this part-time?</p>
+        <p class="a">You can, but I'll set the expectation honestly: <strong>this works best for the committed.</strong> The more consistently you show up and do the work between calls, the faster your business stabilizes. It rewards people who treat it seriously.</p>
+      </div>
+      <div class="item">
+        <p class="q">How fast will I see results?</p>
+        <p class="a">Expect <strong>clarity in month one</strong> and <strong>revenue movement in months two and three</strong> as your systems take hold. This is a systematic build, not an overnight lottery ticket &mdash; and that's precisely why the results tend to last.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO START ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">How to Get Started</h2>
+    <p>The <strong>next enrollment window closes Monday, July 27, 2026.</strong> The doors are open now. When they close, they're closed until the next monthly window &mdash; so if you're ready, now is the moment.</p>
+    <ul class="steps">
+      <li><b>Step 1:</b> Enroll below &mdash; it's $250/month, month-to-month, cancel anytime.</li>
+      <li><b>Step 2:</b> Get access to the private Skool community and your call details.</li>
+      <li><b>Step 3:</b> Show up Thursday at 8:00 AM Pacific, bring a real problem, and start building on solid ground.</li>
+    </ul>
+    <div class="cta-block">
+      <p class="seats-tag">Enrollment Closes July 27</p>
+      <a class="btn btn-primary btn-lg" href="ENROLLMENT_URL_TBD">Enroll in Empire Builders &rarr; $250/month</a>
+      <p class="mini">Month-to-month. Cancel anytime. Backed by the 30-day guarantee.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ONE MORE THING ============ -->
+<section>
+  <div class="wrap">
+    <h2 class="sec">One More Thing</h2>
+    <p>The economy is changing. That's not fear talk &mdash; it's just true. AI is reshaping the work, the old hustle-and-grind model is breaking down, and the ground under a lot of businesses is less stable than it looks.</p>
+    <p>When that happens, <strong>most people wait.</strong> They hope it blows over. They keep doing what used to work and quietly fall behind.</p>
+    <p class="turn"><em>You're not most people.</em></p>
+    <p>Choosing Empire Builders is planting a flag. It's deciding to be <strong>intentional</strong> instead of reactive, to build <strong>systematically</strong> instead of frantically, to reach <strong>$10,000 a month as a floor</strong> &mdash; and to do it in a room full of people building right alongside you, instead of alone.</p>
+    <div class="ps">
+      <p style="margin-bottom:0;font-family:var(--font-serif);font-style:italic;font-size:1.15rem;">See you Thursday morning.<br>&mdash;Ray</p>
+    </div>
+    <div class="cta-block">
+      <a class="btn btn-primary btn-lg" href="ENROLLMENT_URL_TBD">Enroll in Empire Builders &rarr; $250/month</a>
+      <p class="mini">Next window closes Monday, July 27, 2026.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="wordmark">
+      <span class="name">RAY <b>EDWARDS</b></span>
+    </span>
+    <p class="fine">&copy; 2026 Ray Edwards International &middot; Empire Builders</p>
+    <p class="disclaimer-foot">Earnings disclaimer: The income figures referenced on this page ($3,000&ndash;$5,000 and $10,000 per month) are illustrations of what's possible, not typical or guaranteed results. Your results depend on your effort, your offer, your audience, and factors outside our control. Nothing here is a promise or guarantee of income.</p>
+  </div>
+</footer>
+
+</div><!-- /#empire-builders -->
+</body>
+</html>
