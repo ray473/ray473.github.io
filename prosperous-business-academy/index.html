@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prosperous Business Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#000000;
+    --copy-black:#2F2F2F;
+    --red:#FF2222;
+    --red-light:#FF4E4E;
+    --navy:#1C2B4A;
+    --navy-light:#597199;
+    --bg:#0B0B0C;
+    --bg-2:#131315;
+    --panel:#17171A;
+    --line:#2A2A2E;
+    --text:#E8E6E3;
+    --text-dim:#A9A6A2;
+    --paper:#F4F2EF;
+    --h1:clamp(2.6rem,8vw,5.6rem);
+    --h2:clamp(2rem,5vw,3.4rem);
+    --h3:clamp(1.4rem,3vw,2rem);
+    --maxw:1080px;
+    --narrow:760px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Source Sans 3","Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:clamp(1.05rem,1.15vw,1.2rem);
+    line-height:1.65;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;height:auto}
+
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/><feColorMatrix type='saturate' values='0'/></filter><rect width='300' height='300' filter='url(%23n)' opacity='.055'/></svg>");
+  }
+  .wrap{position:relative;z-index:1}
+
+  section{padding:clamp(3.5rem,8vw,7rem) 1.25rem}
+  .inner{max-width:var(--maxw);margin:0 auto}
+  .narrow{max-width:var(--narrow);margin:0 auto}
+
+  h1,h2,.stat-num{
+    font-family:"Bebas Neue",Impact,"Arial Narrow",sans-serif;
+    font-weight:400;line-height:.94;letter-spacing:.01em;margin:0 0 1rem;
+    text-transform:uppercase;
+  }
+  h1{font-size:var(--h1)}
+  h2{font-size:var(--h2)}
+  h3{
+    font-family:"Roboto Condensed",sans-serif;font-weight:700;
+    font-size:var(--h3);line-height:1.15;letter-spacing:.01em;
+    text-transform:uppercase;margin:0 0 .6rem;
+  }
+  .eyebrow{
+    font-family:"Roboto Condensed",sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.22em;
+    font-size:.82rem;color:var(--red-light);margin:0 0 1.1rem;
+  }
+  p{margin:0 0 1.15rem}
+  strong{color:#fff;font-weight:700}
+  em{color:#fff}
+
+  .rule{width:88px;height:6px;background:var(--red);border:0;margin:0 0 1.6rem;display:block}
+
+  /* HERO */
+  .hero{
+    position:relative;padding-top:clamp(3rem,7vw,5.5rem);
+    background:
+      radial-gradient(1100px 620px at 78% -8%, rgba(255,34,34,.17), transparent 62%),
+      radial-gradient(900px 520px at 8% 8%, rgba(28,43,74,.55), transparent 65%),
+      linear-gradient(180deg,#0B0B0C 0%, #101014 72%, #0B0B0C 100%);
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .hero .circle{position:absolute;border-radius:50%;pointer-events:none;border:1px solid rgba(255,78,78,.18)}
+  .hero .c1{width:520px;height:520px;right:-170px;top:-160px}
+  .hero .c2{width:300px;height:300px;right:-40px;top:130px;border-color:rgba(89,113,153,.22)}
+  .hero h1{max-width:16ch}
+  .hero .sub{
+    font-family:"Roboto Condensed",sans-serif;font-size:clamp(1.15rem,2.2vw,1.5rem);
+    line-height:1.35;color:var(--text);max-width:40ch;margin:0 0 1.6rem;
+  }
+  .hero .lede{max-width:52ch;color:var(--text-dim)}
+  .hero-video{
+    width:100%;max-width:820px;margin:.4rem 0 2rem;
+    border-radius:10px;box-shadow:0 18px 60px rgba(0,0,0,.55),0 0 0 1px var(--line);
+  }
+  .hero-video .voomly-embed{max-width:100%}
+
+  .cta{
+    display:inline-block;background:var(--red);color:#fff;text-decoration:none;
+    font-family:"Bebas Neue",Impact,sans-serif;font-size:clamp(1.3rem,2.4vw,1.65rem);
+    letter-spacing:.05em;padding:.85em 1.7em;border-radius:3px;
+    transition:transform .15s ease, box-shadow .25s ease, background .2s ease;
+  }
+  .cta:hover,.cta:focus-visible{background:var(--red-light);transform:translateY(-2px);box-shadow:0 0 34px rgba(255,34,34,.45)}
+  .cta-note{
+    font-family:"Roboto Condensed",sans-serif;text-transform:uppercase;
+    letter-spacing:.12em;font-size:.78rem;color:var(--text-dim);margin:.95rem 0 0;
+  }
+  .cta-block{margin:2rem 0 0}
+
+  .deadline{
+    display:inline-flex;align-items:baseline;gap:.55rem;flex-wrap:wrap;
+    border:1px solid var(--line);border-left:4px solid var(--red);
+    background:rgba(0,0,0,.35);padding:.7rem 1rem;margin:0 0 1.9rem;
+    font-family:"Roboto Condensed",sans-serif;text-transform:uppercase;
+    letter-spacing:.1em;font-size:.85rem;color:var(--text-dim);
+  }
+  .deadline b{color:#fff;letter-spacing:.06em}
+
+  .first-six{
+    display:flex;gap:.8rem;align-items:flex-start;max-width:52ch;
+    margin:0 0 1.6rem;padding:.9rem 1.1rem;border:1px solid rgba(255,78,78,.45);
+    background:rgba(255,34,34,.08);border-radius:2px;font-size:1rem;
+  }
+  .first-six .dot{flex:0 0 10px;height:10px;margin-top:.5rem;border-radius:50%;background:var(--red);box-shadow:0 0 12px var(--red)}
+  .first-six p{margin:0}
+
+  .band{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .paper{background:var(--paper);color:var(--copy-black)}
+  .paper h2,.paper h3{color:var(--ink)}
+  .paper strong,.paper em{color:var(--ink)}
+  .paper .eyebrow{color:var(--red)}
+  .paper p{color:var(--copy-black)}
+
+  .grid{display:grid;gap:1.1rem}
+  @media(min-width:760px){
+    .grid.two{grid-template-columns:1fr 1fr}
+  }
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--red);
+    padding:1.6rem 1.5rem;border-radius:2px;
+  }
+  .card h3{color:#fff}
+  .card p:last-child{margin-bottom:0}
+  .card .num{
+    font-family:"Bebas Neue",Impact,sans-serif;font-size:2.4rem;color:var(--red-light);
+    line-height:1;display:block;margin-bottom:.4rem;
+  }
+
+  /* value stack */
+  .stack{display:grid;gap:1.1rem;margin-top:2rem}
+  .item{
+    display:grid;grid-template-columns:auto 1fr;gap:1.1rem;
+    background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--navy-light);
+    padding:1.5rem 1.4rem;border-radius:2px;
+  }
+  .item .n{
+    font-family:"Bebas Neue",Impact,sans-serif;font-size:2.6rem;line-height:.9;color:var(--red-light);
+    min-width:1.6ch;
+  }
+  .item h3{color:#fff;margin-bottom:.45rem}
+  .item .tag{
+    display:inline-block;font-family:"Roboto Condensed",sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;color:var(--text-dim);
+    border:1px solid var(--line);padding:.2rem .55rem;margin:0 0 .7rem;border-radius:2px;
+  }
+  .item p:last-child,.item ul:last-child{margin-bottom:0}
+  .item ul{margin:0 0 1rem;padding-left:1.15rem}
+  .item li{margin:.25rem 0}
+  .item.fast{border-left-color:var(--red);background:linear-gradient(180deg,rgba(255,34,34,.10),var(--panel) 70%);border-color:rgba(255,78,78,.4)}
+  .item.fast .tag{color:#fff;background:var(--red);border-color:var(--red)}
+
+  .total{
+    margin-top:1.6rem;padding:1.4rem 1.5rem;border:1px dashed var(--line);text-align:center;
+    font-family:"Roboto Condensed",sans-serif;text-transform:uppercase;letter-spacing:.08em;
+  }
+  .total .big{display:block;font-family:"Bebas Neue",Impact,sans-serif;font-size:clamp(2rem,5vw,3rem);letter-spacing:.02em;color:#fff;line-height:1;margin-top:.3rem}
+
+  ul.check{list-style:none;padding:0;margin:0}
+  ul.check li{position:relative;padding:.75rem 0 .75rem 2.4rem;border-bottom:1px solid var(--line)}
+  ul.check li:last-child{border-bottom:0}
+  ul.check li::before{content:"";position:absolute;left:0;top:1.15rem;width:13px;height:13px;background:var(--red);border-radius:50%}
+
+  .phase{border-left:3px solid var(--navy-light);padding:.2rem 0 .2rem 1.5rem;margin:0 0 2rem}
+  .phase.two{border-left-color:var(--red)}
+  .phase h3{margin-bottom:.35rem}
+
+  .member{display:grid;gap:1rem;padding:1.6rem 1.5rem;background:var(--panel);border:1px solid var(--line);border-radius:2px}
+  .member .who{font-family:"Roboto Condensed",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.82rem;color:var(--red-light)}
+  .member p:last-child{margin-bottom:0}
+
+  .obj{border-top:1px solid var(--line);padding:1.5rem 0}
+  .obj:last-of-type{border-bottom:1px solid var(--line)}
+  .paper .obj{border-color:#DedAd4}
+  .paper .obj h3{color:var(--ink)}
+
+  .price-box{
+    background:linear-gradient(180deg,#141418,#0D0D10);
+    border:1px solid var(--line);border-top:4px solid var(--red);
+    padding:clamp(1.8rem,4vw,3rem);text-align:center;border-radius:2px;
+  }
+  .price{font-family:"Bebas Neue",Impact,sans-serif;font-size:clamp(4rem,12vw,7rem);line-height:.9;color:#fff;display:block}
+  .price small{display:block;font-family:"Roboto Condensed",sans-serif;font-size:1rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-top:.5rem}
+  .price-box ul.check{text-align:left;max-width:30rem;margin:1.8rem auto 0}
+  .guarantee{border:1px dashed var(--navy-light);padding:1.5rem;border-radius:2px;background:rgba(28,43,74,.25)}
+  .guarantee h3{color:#fff}
+
+  footer{background:#000;border-top:1px solid var(--line);padding:3rem 1.25rem;font-size:.9rem;color:#7C7A77}
+  footer .inner{max-width:var(--narrow)}
+  .disclaimer{font-size:.82rem;line-height:1.5}
+
+  .sig{font-family:"Roboto Condensed",sans-serif;text-transform:uppercase;letter-spacing:.18em;font-size:.85rem;color:var(--text-dim)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HERO -->
+<section class="hero">
+  <span class="circle c1"></span>
+  <span class="circle c2"></span>
+  <div class="inner">
+    <p class="eyebrow">The Prosperous Business Academy</p>
+    <hr class="rule">
+    <h1>Your Results.<br>Multiplied.<br><span style="color:var(--red)">Guaranteed.</span></h1>
+    <p class="guarantee-line" style="font-family:'Roboto Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:clamp(.95rem,1.8vw,1.15rem);color:var(--text);margin:0 0 1.8rem;max-width:44ch">Come to four Thursdays. If it isn't for you, I'll refund every dollar. Keep the books and journal either way.</p>
+
+    <!-- HERO VIDEO (Voomly) -->
+    <div class="hero-video">
+      <script src="https://embed.voomly.softwarepublishingapp.com/embed/embed-build.js"></script><div class="voomly-embed" data-id="EUdshl82xJLIjwPX28FsvFONDRKARFjpvIJP3No6RAah2VN9A" data-ratio="1.777778" data-type="v" data-skin-color="#3155F1" data-shadow="" style="width: 100%; aspect-ratio: 1.77778 / 1; background: linear-gradient(45deg, rgb(142, 150, 164) 0%, rgb(201, 208, 222) 100%); border-radius: 10px;"></div>
+    </div>
+
+    <p class="sub">Join me this Thursday morning. Two hours, live, coaching a small, intentional peer group of experienced entrepreneurs like you — for $297.</p>
+    <p class="lede">You don't need more information. We're all drowning in information and starving for wisdom. What you've likely never had is a standing appointment, every single week, with someone experienced who looks at your business from the outside, tells you the real next step — and asks you the following week whether you took it.</p>
+
+    <!-- FIRST-SIX CALLOUT: remove when all six private calls are claimed -->
+    <div class="first-six" data-first-six>
+      <span class="dot"></span>
+      <p><strong>First six members only:</strong> a private one-on-one call with me — the same call people pay me $2,500 for. When the six are claimed, this comes off the page.</p>
+    </div>
+
+    <div class="cta-block">
+      <div class="deadline" id="deadline">Join by <b>Monday, 5:00 p.m. Eastern</b> to get every bonus</div><br>
+      <a class="cta" href="https://buy.stripe.com/aFa4gyceTfRWdpFeqgawo0w">JOIN — $297/MONTH →</a>
+      <p class="cta-note">Month to month · No contract · Cancel any time</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section>
+  <div class="narrow">
+    <p class="eyebrow">The plan you've had for years</p>
+    <hr class="rule">
+    <h2>You already know enough. You've just never had a Thursday morning.</h2>
+    <p>The personal brand. The consulting practice. The thing built on what you actually know, instead of what your job description says. You've had the conversation with your spouse more than once. You've probably bought a course about it.</p>
+    <p>And you're still where you were.</p>
+    <p>Not for lack of experience. You've got decades of it. So do I. Experience is the whole asset. What's missing is somebody experienced looking at <em>your</em> situation from the outside, naming the actual next step — then asking you next week whether you took it.</p>
+    <p>That has real value. That's what this is.</p>
+  </div>
+</section>
+
+<!-- VALUE STACK -->
+<section class="band">
+  <div class="narrow">
+    <p class="eyebrow">Here's exactly what you get for $297</p>
+    <hr class="rule">
+    <h2>Everything you get</h2>
+
+    <div class="stack">
+      <div class="item">
+        <span class="n">1</span>
+        <div>
+          <h3>Membership in the Prosperous Business Academy</h3>
+          <span class="tag">When I coach privately, one call a month is $2,500</span>
+          <ul>
+            <li><strong>Me, live, every Thursday for two hours</strong> — 8:00 to 10:00 a.m. Pacific</li>
+            <li><strong>Your own hot seat</strong>, where the group works on <em>your</em> business</li>
+            <li><strong>An intentional peer group</strong> of experienced entrepreneurs who will see what you can't</li>
+            <li><strong>A private community</strong> for the days in between</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <span class="n">2</span>
+        <div>
+          <h3>All three of my books — signed by me</h3>
+          <ul>
+            <li><strong>How to Write Copy That Sells</strong> — for your messaging</li>
+            <li><strong>Permission to Prosper</strong> — for your money</li>
+            <li><strong>Read This or Die!</strong> — the book I wrote after my Parkinson's diagnosis, about how persuasion saved my own life, and maybe how it can improve yours</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <span class="n">3</span>
+        <div>
+          <h3>Live workshop: How to Thrive in the Age of AI</h3>
+          <span class="tag">Live · Thursday, October 15 · 11:00 a.m. · Members only</span>
+          <p>Learn to use AI to amplify your voice and your offers — without putting out a single sentence of AI slop. You must be a member to get in.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <span class="n">4</span>
+        <div>
+          <h3>My journal and pen</h3>
+          <p>I get this question all the time: <em>"What kind of journal is that you're using, Ray?"</em> There's no such thing as a magic journal. This one may come close. It's just the right size, and the paper is good enough that a fountain pen or a marker won't bleed through.</p>
+        </div>
+      </div>
+
+      <!-- FIRST-SIX BONUS: remove when all six private calls are claimed -->
+      <div class="item fast" data-first-six>
+        <span class="n">5</span>
+        <div>
+          <h3>A private one-on-one call with me</h3>
+          <span class="tag">First six people only</span>
+          <p>Just you and me, working on your business. It's the same call people pay me <strong>$2,500</strong> for. When six people have claimed it, it comes off this page — that's how you'll know all six seats are filled.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="total">
+      If you're one of the six who gets through
+      <span class="big">More than $3,000 in value</span>
+      <span style="display:block;margin-top:.5rem;color:var(--text-dim)">Yours for $297 a month · No contract · No obligation</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT HAPPENS -->
+<section>
+  <div class="inner">
+    <p class="eyebrow">Thursdays, 8:00–10:00 a.m. Pacific</p>
+    <hr class="rule">
+    <h2>Exactly what happens</h2>
+    <div class="grid two" style="margin-top:2rem">
+      <div class="card">
+        <span class="num">01</span>
+        <h3>Hour one — the mastermind</h3>
+        <p>We open with a wins round, because momentum is a discipline and we practice it deliberately. Then the accountability check: the commitments you made last week, said out loud, in front of people who notice.</p>
+        <p>Then a focus topic I facilitate — the one thing most likely to move everybody's business this week.</p>
+      </div>
+      <div class="card">
+        <span class="num">02</span>
+        <h3>Hour two — spotlights</h3>
+        <p>Your hot seat. You bring something real: a price you're afraid to name, an offer that won't convert, a decision you've circled for a month.</p>
+        <p>The group puts its full attention on your situation — every experienced entrepreneur present, plus me. Then open questions, until nobody's left holding one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PATH -->
+<section class="band">
+  <div class="narrow">
+    <p class="eyebrow">The path</p>
+    <hr class="rule">
+    <h2>A floor, not a spike</h2>
+    <p style="margin-bottom:2.2rem">Most business advice sells you a spike — a launch, a big week, a good month. Almost nobody sells you a floor: income you can predict instead of hope for. That's the whole design here.</p>
+    <div class="phase">
+      <h3>Phase one — Stabilize</h3>
+      <p>Months one through three. Steady the ground under you and reach your first genuinely stable <strong>$3,000 to $5,000 months</strong>.</p>
+    </div>
+    <div class="phase two">
+      <h3>Phase two — Prosper</h3>
+      <p>Month four onward. Build from that base toward a <strong>$10,000 monthly floor</strong>. Not a target you chase. A baseline you stand on.</p>
+    </div>
+    <p style="font-size:.9rem;color:var(--text-dim);font-style:italic;margin-top:1.5rem">These figures are examples, not typical or guaranteed. Results depend on your effort and engagement.</p>
+  </div>
+</section>
+
+<!-- WHY SO CHEAP -->
+<section>
+  <div class="narrow">
+    <p class="eyebrow">The obvious question</p>
+    <hr class="rule">
+    <h2>"Then why is this so cheap, Ray?"</h2>
+    <p>It's the right question. It's the one I'd ask. My work has produced an estimated $1 billion in online sales, and one private call a month with me is $2,500. So what's going on?</p>
+
+    <h3 style="margin-top:2rem;color:#fff">One: this is the entry-level price.</h3>
+    <p>$297 buys you two hours of working with me every week, in a group. If you eventually want something closer and more direct, that exists, and it costs considerably more. But I'd rather you experience how I think before you make a decision at that level. Most people can't tell from a sales page whether someone will actually be useful to them, and I don't think they should have to guess.</p>
+
+    <h3 style="margin-top:2rem;color:#fff">Two: I've reached the season where I choose who I help.</h3>
+    <p>One group I want around me is people with real expertise who've been planning their exit from corporate life for years and never started. You don't need a beginner's program. You need experienced peers, honest accountability, and someone who'll tell you which of your ideas is the one.</p>
+    <p>Eventually you may outgrow this and want something more specialized — the person running a million-dollar business faces different obstacles than the person building toward their first stable $10,000 month. Different problems need different tables. I'd rather serve you well now than oversell you into the wrong thing.</p>
+  </div>
+</section>
+
+<!-- MEMBERS TEACHING MEMBERS -->
+<section class="band">
+  <div class="inner">
+    <p class="eyebrow">Get paid to pass it on</p>
+    <hr class="rule">
+    <h2>The peers are not a consolation prize</h2>
+    <p class="narrow" style="margin:0 auto 2.2rem;text-align:left">You're not buying access to one person's brain. You're joining a group where the person who's brilliant at the thing you're stuck on is already part of the group.</p>
+    <div class="grid two">
+      <div class="member">
+        <span class="who">Gwen Baird — member</span>
+        <p>Gwen is the one our members quietly message when their ads aren't working. Last Thursday she taught the entire group Facebook ads. Not a hired expert — a member. Her peers called it one of the best sessions we've run.</p>
+      </div>
+      <div class="member">
+        <span class="who">John Junk — member</span>
+        <p>John owns and operates Belfast Books, a bookstore he made world-famous through some genuinely clever work on Twitter. He spends his time helping other members with funnels and websites. Nobody assigned him that.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIONS -->
+<section class="paper">
+  <div class="narrow">
+    <p class="eyebrow">Let's settle them</p>
+    <hr class="rule">
+    <h2>The three things stopping you</h2>
+    <div class="obj">
+      <h3>"I don't have time for a weekly call."</h3>
+      <p>Backwards, and I say it with sympathy because I believed it too. Think about last month: how many hours went into a decision you circled for three weeks and could have settled in ten minutes with someone who'd already made it? You're paying that tax every week right now. And if life takes a week from you — it will — the group and the community are still there when you're back.</p>
+    </div>
+    <div class="obj">
+      <h3>"I'm not really a group person."</h3>
+      <p>Neither was I. I joined my first mastermind certain I'd get more done alone, and I was wrong in a way that cost me years. The problem you can't see is, by definition, the one you can't see. Everybody else spots it in about four minutes. And half of what I know I learned by listening to somebody else get helped.</p>
+    </div>
+    <div class="obj">
+      <h3>"I'm honestly doing okay on my own."</h3>
+      <p>I believe you. But listen to the sentence again. <em>Okay. On my own.</em> "Okay" is the most dangerous number in business — bad forces a change, good funds a change, and okay just quietly continues until something outside you decides it's finished. You've been okay for years. That's exactly the problem.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section>
+  <div class="narrow">
+    <div class="price-box">
+      <p class="eyebrow" style="margin-bottom:.5rem">Prosperous Business Academy</p>
+      <span class="price">$297<small>per month · no contract · cancel any time</small></span>
+      <ul class="check">
+        <li>Live two-hour coaching with me, every Thursday</li>
+        <li>All three books, signed</li>
+        <li>How to Thrive in the Age of AI — live October 15</li>
+        <li>My journal and pen</li>
+        <li data-first-six><strong>First six only:</strong> a private one-on-one call with me ($2,500 value)</li>
+      </ul>
+      <div style="margin-top:2rem">
+        <a class="cta" href="https://buy.stripe.com/aFa4gyceTfRWdpFeqgawo0w">JOIN — $297/MONTH →</a>
+        <p class="cta-note">Join by Monday, 5:00 p.m. Eastern to get every bonus</p>
+      </div>
+    </div>
+
+    <div class="guarantee" style="margin-top:2rem">
+      <h3>The 30-day guarantee</h3>
+      <p style="margin-bottom:0">Join, come to the first four Thursday calls, and if it isn't for you, tell me and I'll refund every dollar. The only condition is that you actually show up. The only way to lose here is to not come. Keep the books and journal either way.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="band">
+  <div class="narrow">
+    <hr class="rule">
+    <h2>What you've been given wasn't meant to end with you</h2>
+    <p>You know things. Real things, learned slowly, mostly by being wrong first. That knowledge has value the moment it becomes useful to somebody else, and almost none while it stays where it is.</p>
+    <p>You join for $297 a month. No contract, no obligation, cancel any time. Join by <strong>Monday at 5:00 p.m. Eastern</strong> to get all the bonuses.</p>
+    <p data-first-six>And if you want that private call, don't wait for Monday. Those six spots will not last long.</p>
+    <p>Click the button below. I'll sign your books, ship your journal, and see you Thursday.</p>
+    <div class="cta-block">
+      <a class="cta" href="https://buy.stripe.com/aFa4gyceTfRWdpFeqgawo0w">JOIN THE ACADEMY — $297/MONTH →</a>
+      <p class="cta-note">Month to month · No contract · Cancel any time</p>
+    </div>
+    <p class="sig" style="margin-top:2.5rem">— Ray Edwards</p>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    <p class="disclaimer"><strong style="color:#9C9996">Earnings disclaimer:</strong> Any income figures referenced on this page are examples and are not typical, promised, or guaranteed. Results depend entirely on your own effort, experience, and engagement. Nothing here should be taken as a guarantee of income.</p>
+    <p class="disclaimer">© 2026 Ray Edwards International. All rights reserved.</p>
+  </div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  // Bonus deadline: Monday Oct 12, 2026, 5:00 p.m. Eastern (UTC-4)
+  var end = new Date("2026-10-12T17:00:00-04:00").getTime();
+  var el = document.getElementById("deadline");
+  if(!el || isNaN(end)) return;
+  function tick(){
+    var diff = end - Date.now();
+    if(diff <= 0){
+      el.innerHTML = "Bonus deadline has <b>passed</b> — membership is still open";
+      clearInterval(t);
+      return;
+    }
+    var d = Math.floor(diff/86400000),
+        h = Math.floor(diff%86400000/3600000),
+        m = Math.floor(diff%3600000/60000),
+        s = Math.floor(diff%60000/1000);
+    el.innerHTML = "Bonuses end in <b>" + d + "d " + h + "h " + m + "m " + s + "s</b> — Monday, 5:00 p.m. Eastern";
+  }
+  tick();
+  var t = setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
